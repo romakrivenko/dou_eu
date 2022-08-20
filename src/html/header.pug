@@ -1,0 +1,22 @@
+header.header
+    nav.nav
+        ul.nav__list
+            li.nav__item
+                a.logo
+                    img(src='img/dou_logo.svg')
+    button(class=['nav_btn', 'black', 'hamburger'])
+        img(src='img/hamburger.svg')
+    div.search
+        button(class=['nav_btn', 'black'])
+            img(src='img/chart.svg')
+        div.form
+            input(type='text')
+            div(class=['nav_btn', 'transparent', 'interface_text'])
+                img(src='img/search.svg')
+        button(class=['nav_btn', 'nav_btn__txt_img','red', 'interface_text']) Write post
+            img(src='img/edit.svg')
+
+    div.user
+        button(class=['nav_btn', 'nav_btn__txt', 'black', 'interface_text']) Create account
+        button(class=['nav_btn'])
+            img(src='img/user.svg')

@@ -1,0 +1,118 @@
+@import "variables";
+@import "null";
+@import "fonts";
+@import "typography";
+@import "menu";
+
+/** general styles **/
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	overflow: hidden;
+}
+
+.main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	&__post {
+		max-width: 975px;
+		margin: 0 auto;
+		margin-top: 160px;
+		padding: 0 2em;
+		@include xl {
+			margin-top: 120px;
+			max-width: 645px;
+		}
+		@include lg {
+			margin-top: 80px;
+		}
+		@include sm {
+			margin-top: 80px;
+		}
+	}
+}
+
+.btn {
+	//padding: .5em 2.4em .6em;
+	background: transparent;
+	color: $white;
+	display: inline-flex;
+	flex-direction: row-reverse;
+	-webkit-appearance: none;
+	width: fit-content;
+	border-radius: 8px;
+	align-items: center;
+	white-space: nowrap;
+}
+
+.red {
+	background: $red;
+}
+
+.black {
+	background: $black;
+}
+
+.transparent {
+	background: transparent;
+}
+
+.hidden {
+	display: none;
+}
+
+
+.form {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border-radius: 8px;
+	border: 2px solid $black;
+	font-family: 'KyivTypeSans', sans-serif;
+	input[type=text], [type=email], [type=textarea] {
+		width: 100%;
+		padding: .5em;
+		margin: 0;
+		display: inline-block;
+		box-sizing: border-box;
+		cursor: text;
+		background: transparent;
+		font-family: 'KyivTypeSans', sans-serif;
+	}
+	input[type=checkbox] {
+		display: block;
+		width: 30px;
+		height: 30px;
+		border: 1px solid $red;
+		//-webkit-appearance: none;
+		cursor: pointer;
+		label {
+			cursor: pointer;
+		}
+	}
+	.checkbox {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		input {
+			margin: .5em .5em .5em 0;
+		}
+
+	}
+	.checkbox label:before {
+		//border-radius: 3px;
+	}
+	input[type=checkbox]:checked {
+		content: "\2713";
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+		color: $red;
+		text-align: center;
+		line-height: 15px;
+	}
+}
+
+

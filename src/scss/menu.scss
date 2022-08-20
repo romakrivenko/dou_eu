@@ -1,0 +1,119 @@
+/** menu and navigation **/
+.header {
+  width: 100%;
+  height: 60px;
+  background: $white;
+  color: $black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 3em;
+  position: fixed;
+  gap: 1em;
+  @include lg {
+    padding: 8px 2em;
+  }
+  @include sm {
+    padding: 8px 1em;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style-type: none;
+  align-items: flex-start;
+}
+.logo {
+  display: block;
+  width: 67px;
+  height: 23px;
+}
+
+.nav__item {
+  margin-right: 1em;
+}
+
+.nav__link {
+  color: $black;
+  line-height: initial;
+  &:hover {
+    color: $blackHover;
+  }
+}
+
+.nav_btn {
+  height: 44px;
+  padding: .5em;
+  background: transparent;
+  color: $white;
+  display: inline-flex;
+  flex-direction: row;
+  -webkit-appearance: none;
+  width: fit-content;
+  border-radius: 8px;
+  align-items: center;
+  white-space: nowrap;
+  &:hover {
+    opacity: .8;
+  }
+  &__txt {
+    padding: .2em 2.4em;
+    @include lg {
+      padding: .2em 2em;
+    }
+    @include md {
+      padding: .2em 1em;
+    }
+  }
+  &__txt_img {
+    padding: .2em 2.2em .2em 2.4em;
+    img {
+      margin-left: .5em;
+    }
+    @include lg {
+      padding: .2em 2em;
+    }
+    @include md {
+      padding: .2em 1em;
+    }
+  }
+  img {
+    width: auto;
+    height: 20px;
+  }
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  gap: 1em;
+  @include lg {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+  @include lg {
+    display: inline-flex;
+  }
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  gap: 1em;
+}

@@ -1,0 +1,142 @@
+/** typography **/
+body {
+  font-family: 'KyivTypeSans', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: $black;
+}
+
+@mixin font($ff,$sz,$wg,$fs,$tt,$ls,$lh){
+  font-family: $ff;
+  font-size: $sz;
+  letter-spacing: $ls;
+  font-weight: $wg;
+  font-style: $fs;
+  text-transform: $tt;
+  line-height: $lh;
+}
+
+.title {
+  @include font('KyivTypeSans',2.2em,700,normal,normal,inherit,1.1);
+  @include xl {
+    font-size: 2.2em;
+  }
+  @include lg {
+    font-size: 2em;
+  }
+  @include md {
+    font-size: 1.8em;
+  }
+  @include sm {
+    font-size: 1.6em;
+  }
+}
+
+.subtitle {
+  @include font('KyivTypeSans',1.8em,700,normal,normal,inherit,normal);
+  @include xl {
+    font-size: 1.8em;
+  }
+  @include lg {
+    font-size: 1.6em;
+  }
+  @include md {
+    font-size: 1.4em;
+  }
+  @include sm {
+    font-size: 1.2em;
+  }
+}
+
+.small_title {
+  @include font('KyivTypeSans',1.4em,700,normal,normal,inherit  ,1.2);
+  @include xl {
+    font-size: 1.2em;
+  }
+  @include lg {
+    font-size: 1.2em;
+  }
+  @include sm {
+    font-size: 1em;
+  }
+}
+
+.interface_title {
+  @include font('KyivTypeSans',1em,700,normal,normal,inherit  ,1.2);
+  @include xl {
+    font-size: 1em;
+  }
+  @include lg {
+    font-size: .9em;
+  }
+  @include sm {
+    font-size: .8em;
+  }
+}
+
+.lead {
+  @include font('KyivTypeSans',1.1em,400,normal,none,0,1.4);
+  @include xl {
+    font-size: .9em;
+  }
+  @include lg {
+    font-size: .9em;
+  }
+  @include sm {
+    font-size: .8em;
+  }
+}
+
+.text {
+  @include font('Montserrat',1em,400,normal,normal,0,1.5);
+  @include xl {
+    font-size: .8em;
+  }
+  @include lg {
+    font-size: .8em;
+  }
+  @include md {
+    font-size: .8em;
+  }
+  @include sm {
+    font-size: .8em;
+  }
+}
+
+.interface_text {
+  @include font('KyivTypeSans',1em,500,normal,normal,0,1.5);
+  @include xl {
+    font-size: .8em;
+  }
+  @include lg {
+    font-size: .8em;
+  }
+  @include md {
+    font-size: .8em;
+  }
+  @include sm {
+    font-size: .8em;
+  }
+}
+
+.caption {
+  @include font('Montserrat',.8em,400,italic,none,0,1.5);
+  @include xl {
+    font-size: .6em;
+  }
+}
+
+.small {
+  @include font('Montserrat',.8em,400,normal,none,0,1.5);
+  @include xl {
+    font-size: .6em;
+  }
+}
+
+.small, .caption {
+  max-width: 30em;
+}
+
+p, h1, h2, h3, h4 {
+  margin-bottom: .8em;
+}

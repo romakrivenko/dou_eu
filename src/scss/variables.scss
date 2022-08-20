@@ -1,0 +1,42 @@
+// variables
+
+$centerBlock: 0 auto;
+
+$white: rgba(255, 255, 255, 1);
+$red: rgba(214, 20, 55, 1);
+$black: rgba(0, 0, 0, 1);
+$redHover: rgba(214, 20, 55, .8);
+$whiteHover: rgba(255, 255, 255, .8);
+$blackHover: rgba(0, 0, 0, .8);
+
+$screen-sm-max: 420px;
+$screen-md-max: 768px;
+$screen-lg-max: 1024px;
+$screen-xl-max: 1440px;
+
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+@mixin rwd($screen) {
+  @media (max-width: $screen+'px') {
+    @content;
+  }
+}

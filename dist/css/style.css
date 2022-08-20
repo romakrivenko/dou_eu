@@ -1,0 +1,626 @@
+@charset "UTF-8";
+/** null **/
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-size: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+sub, sup {
+  font-size: 0.5em;
+}
+
+/*
+&::-webkit-scrollbar {
+	display: none;
+}
+*/
+/** fonts **/
+@font-face {
+  font-family: KyivTypeSans;
+  font-display: swap;
+  src: url("../fonts/KyivTypeSans-Medium.woff2") format("woff2"), url("../fonts/KyivTypeSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: KyivTypeSans;
+  font-display: swap;
+  src: url("../fonts/KyivTypeSans-Bold.woff2") format("woff2"), url("../fonts/KyivTypeSans-Bold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/RobotoMono-Regular.woff2") format("woff2"), url("../fonts/RobotoMono-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/** typography **/
+body {
+  font-family: "KyivTypeSans", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.title {
+  font-family: "KyivTypeSans";
+  font-size: 2.2em;
+  letter-spacing: inherit;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: normal;
+  line-height: 1.1;
+}
+@media (max-width: 1440px) {
+  .title {
+    font-size: 2.2em;
+  }
+}
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2em;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 420px) {
+  .title {
+    font-size: 1.6em;
+  }
+}
+
+.subtitle {
+  font-family: "KyivTypeSans";
+  font-size: 1.8em;
+  letter-spacing: inherit;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: normal;
+  line-height: normal;
+}
+@media (max-width: 1440px) {
+  .subtitle {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 1024px) {
+  .subtitle {
+    font-size: 1.6em;
+  }
+}
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 1.4em;
+  }
+}
+@media (max-width: 420px) {
+  .subtitle {
+    font-size: 1.2em;
+  }
+}
+
+.small_title {
+  font-family: "KyivTypeSans";
+  font-size: 1.4em;
+  letter-spacing: inherit;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: normal;
+  line-height: 1.2;
+}
+@media (max-width: 1440px) {
+  .small_title {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 1024px) {
+  .small_title {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 420px) {
+  .small_title {
+    font-size: 1em;
+  }
+}
+
+.interface_title {
+  font-family: "KyivTypeSans";
+  font-size: 1em;
+  letter-spacing: inherit;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: normal;
+  line-height: 1.2;
+}
+@media (max-width: 1440px) {
+  .interface_title {
+    font-size: 1em;
+  }
+}
+@media (max-width: 1024px) {
+  .interface_title {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 420px) {
+  .interface_title {
+    font-size: 0.8em;
+  }
+}
+
+.lead {
+  font-family: "KyivTypeSans";
+  font-size: 1.1em;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1.4;
+}
+@media (max-width: 1440px) {
+  .lead {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 1024px) {
+  .lead {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 420px) {
+  .lead {
+    font-size: 0.8em;
+  }
+}
+
+.text {
+  font-family: "Montserrat";
+  font-size: 1em;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: normal;
+  line-height: 1.5;
+}
+@media (max-width: 1440px) {
+  .text {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 1024px) {
+  .text {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 768px) {
+  .text {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 420px) {
+  .text {
+    font-size: 0.8em;
+  }
+}
+
+.interface_text {
+  font-family: "KyivTypeSans";
+  font-size: 1em;
+  letter-spacing: 0;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: normal;
+  line-height: 1.5;
+}
+@media (max-width: 1440px) {
+  .interface_text {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 1024px) {
+  .interface_text {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 768px) {
+  .interface_text {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 420px) {
+  .interface_text {
+    font-size: 0.8em;
+  }
+}
+
+.caption {
+  font-family: "Montserrat";
+  font-size: 0.8em;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: none;
+  line-height: 1.5;
+}
+@media (max-width: 1440px) {
+  .caption {
+    font-size: 0.6em;
+  }
+}
+
+.small {
+  font-family: "Montserrat";
+  font-size: 0.8em;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1.5;
+}
+@media (max-width: 1440px) {
+  .small {
+    font-size: 0.6em;
+  }
+}
+
+.small, .caption {
+  max-width: 30em;
+}
+
+p, h1, h2, h3, h4 {
+  margin-bottom: 0.8em;
+}
+
+/** menu and navigation **/
+.header {
+  width: 100%;
+  height: 60px;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 3em;
+  position: fixed;
+  gap: 1em;
+}
+@media (max-width: 1024px) {
+  .header {
+    padding: 8px 2em;
+  }
+}
+@media (max-width: 420px) {
+  .header {
+    padding: 8px 1em;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style-type: none;
+  align-items: flex-start;
+}
+
+.logo {
+  display: block;
+  width: 67px;
+  height: 23px;
+}
+
+.nav__item {
+  margin-right: 1em;
+}
+
+.nav__link {
+  color: rgb(0, 0, 0);
+  line-height: initial;
+}
+.nav__link:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.nav_btn {
+  height: 44px;
+  padding: 0.5em;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  display: inline-flex;
+  flex-direction: row;
+  -webkit-appearance: none;
+  width: fit-content;
+  border-radius: 8px;
+  align-items: center;
+  white-space: nowrap;
+}
+.nav_btn:hover {
+  opacity: 0.8;
+}
+.nav_btn__txt {
+  padding: 0.2em 2.4em;
+}
+@media (max-width: 1024px) {
+  .nav_btn__txt {
+    padding: 0.2em 2em;
+  }
+}
+@media (max-width: 768px) {
+  .nav_btn__txt {
+    padding: 0.2em 1em;
+  }
+}
+.nav_btn__txt_img {
+  padding: 0.2em 2.2em 0.2em 2.4em;
+}
+.nav_btn__txt_img img {
+  margin-left: 0.5em;
+}
+@media (max-width: 1024px) {
+  .nav_btn__txt_img {
+    padding: 0.2em 2em;
+  }
+}
+@media (max-width: 768px) {
+  .nav_btn__txt_img {
+    padding: 0.2em 1em;
+  }
+}
+.nav_btn img {
+  width: auto;
+  height: 20px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  gap: 1em;
+}
+@media (max-width: 1024px) {
+  .search {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .hamburger {
+    display: inline-flex;
+  }
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  gap: 1em;
+}
+
+/** general styles **/
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+.main__post {
+  max-width: 975px;
+  margin: 0 auto;
+  margin-top: 160px;
+  padding: 0 2em;
+}
+@media (max-width: 1440px) {
+  .main__post {
+    margin-top: 120px;
+    max-width: 645px;
+  }
+}
+@media (max-width: 1024px) {
+  .main__post {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 420px) {
+  .main__post {
+    margin-top: 80px;
+  }
+}
+
+.btn {
+  background: transparent;
+  color: rgb(255, 255, 255);
+  display: inline-flex;
+  flex-direction: row-reverse;
+  -webkit-appearance: none;
+  width: fit-content;
+  border-radius: 8px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.red {
+  background: rgb(214, 20, 55);
+}
+
+.black {
+  background: rgb(0, 0, 0);
+}
+
+.transparent {
+  background: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 8px;
+  border: 2px solid rgb(0, 0, 0);
+  font-family: "KyivTypeSans", sans-serif;
+}
+.form input[type=text], .form [type=email], .form [type=textarea] {
+  width: 100%;
+  padding: 0.5em;
+  margin: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: text;
+  background: transparent;
+  font-family: "KyivTypeSans", sans-serif;
+}
+.form input[type=checkbox] {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(214, 20, 55);
+  cursor: pointer;
+}
+.form input[type=checkbox] label {
+  cursor: pointer;
+}
+.form .checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.form .checkbox input {
+  margin: 0.5em 0.5em 0.5em 0;
+}
+.form input[type=checkbox]:checked {
+  content: "✓";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  color: rgb(214, 20, 55);
+  text-align: center;
+  line-height: 15px;
+}
