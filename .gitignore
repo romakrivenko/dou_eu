@@ -1,6 +1,7 @@
 .idea/
 node_modules
 npm-debug.log
-build
-gulp
-.DS_Sgit tore
+.DS_Store
+dou_eu.zip
+dist
+dou_eu
